@@ -5,14 +5,14 @@
     <title>Concentra | Estadísticas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-    <!-- ✅ Estilos globales del layout -->
+    <!--  Estilos globales del layout -->
     <link rel="stylesheet" href="/src/css/main.css" />
     <link rel="stylesheet" href="/src/css/concentra.css" />
   
-    <!-- ✅ Estilos específicos de esta vista -->
+    <!--  Estilos específicos de esta vista -->
     <link rel="stylesheet" href="/src/css/stats.css" />
   
-    <!-- ✅ Validación de sesión -->
+    <!--  Validación de sesión -->
     <script>
       const user = localStorage.getItem("usuarioActivo");
       if (!user) window.location.href = "/index.html";
@@ -21,15 +21,21 @@
   
 <body>
   <div class="concentra-layout">
-    <!-- ✅ SIDEBAR -->
+    <!--  SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-logo">🧠 Concentra</div>
     
       <nav class="sidebar-menu">
+        <a href="/index.html">Inicio</a>
         <a href="/concentra.html">Concentra actual</a>
         <a href="/stats.html">Estadísticas</a>
         <a href="/nuevo.html">Crear nuevo Concentra</a>
+        <div class="concentra-lista">
+          <h4>Concentras</h4>
+          <ul id="lista-concentras"></ul>
+        </div>
       </nav>
+      
     
       <div class="sidebar-footer">
         <button id="logout-btn">Cerrar sesión</button>
@@ -41,7 +47,7 @@
     </aside>
     
 
-    <!-- ✅ CONTENIDO PRINCIPAL -->
+    <!--  CONTENIDO PRINCIPAL -->
     <main class="main-content">
       <h1>Estadísticas de tus sesiones</h1>
       <section id="stats-container" class="stats-grid">
@@ -50,12 +56,14 @@
     </main>
   </div>
 
-  <!-- ✅ FOOTER -->
+  <!--  FOOTER -->
   <footer class="music-player">
     🎵 Aquí irá el reproductor musical
   </footer>
 
   <script type="module" src="/src/ts/logout.ts"></script>
   <script type="module" src="/src/ts/stats.ts"></script>
+  <script type="module" src="/src/ts/sidebar.ts"></script>
+
 </body>
 </html>

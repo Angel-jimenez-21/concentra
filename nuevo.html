@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crear nuevo Concentra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/concentra.css" />
+  <link rel="stylesheet" href="/src/css/nuevo.css" />
+  <script>
+    const user = localStorage.getItem("usuarioActivo");
+    if (!user) window.location.href = "/index.html";
+  </script>
+</head>
+<body>
+  <div class="concentra-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">🧠 Concentra</div>
+      <nav class="sidebar-menu">
+        <a href="/index.html">Inicio</a>
+        <a href="/concentra.html">Concentra actual</a>
+        <a href="/stats.html">Estadísticas</a>
+        <a href="/nuevo.html">Crear nuevo Concentra</a>
+        <div class="concentra-lista">
+          <h4>Concentras</h4>
+          <ul id="lista-concentras"></ul>
+        </div>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button id="logout-btn">Cerrar sesión</button>
+        <div class="user-profile">
+          <div class="avatar">👤</div>
+          <span class="user-name">Usuario</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content nuevo-concentra">
+        <h1>Nuevo Concentra</h1>
+      
+        <form id="nuevo-form" class="form-concentra">
+          <label>
+            Nombre del Concentra:
+            <input type="text" id="nombre" required />
+          </label>
+      
+          <label>
+            Tiempo de trabajo (min):
+            <input type="number" id="trabajo" value="25" min="1" required />
+          </label>
+      
+          <label>
+            Descanso corto (min):
+            <input type="number" id="corto" value="5" min="1" required />
+          </label>
+      
+          <label>
+            Descanso largo (min):
+            <input type="number" id="largo" value="15" min="1" required />
+          </label>
+      
+          <button type="submit" class="btn-black">Guardar Concentra</button>
+        </form>
+      </main>
+      
+  </div>
+
+  <footer class="music-player">🎵 Aquí irá el reproductor musical</footer>
+
+  <script type="module" src="/src/ts/logout.ts"></script>
+  <script type="module" src="/src/ts/nuevo.ts"></script>
+</body>
+</html>

@@ -14,15 +14,21 @@
 </head>
 <body>
   <div class="concentra-layout">
-    <!-- ✅ SIDEBAR -->
+    <!--  SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-logo">🧠 Concentra</div>
     
       <nav class="sidebar-menu">
+        <a href="/index.html">Inicio</a>
         <a href="/concentra.html">Concentra actual</a>
         <a href="/stats.html">Estadísticas</a>
         <a href="/nuevo.html">Crear nuevo Concentra</a>
+        <div class="concentra-lista">
+          <h4>Concentras</h4>
+          <ul id="lista-concentras"></ul>
+        </div>
       </nav>
+      
     
       <div class="sidebar-footer">
         <button id="logout-btn">Cerrar sesión</button>
@@ -34,7 +40,7 @@
     </aside>
     
 
-    <!-- ✅ SECCIÓN PRINCIPAL -->
+    <!--  SECCIÓN PRINCIPAL -->
     <main class="main-content">
       <h1>Concentra Actual</h1>
 
@@ -45,10 +51,10 @@
         <button id="config-btn" class="config-icon">⋮</button>
       </div>
       
-      <!-- 🕒 TEMPORIZADOR -->
+      <!--  TEMPORIZADOR -->
       <div id="ciclo-count" class="ciclo-info">Ciclos completados: 0</div>
 
-      <!-- 🕒 TEMPORIZADOR con botones centrados -->
+      <!--  TEMPORIZADOR con botones centrados -->
 <div class="timer-box">
     <div id="timer-display">25:00</div>
     <div class="timer-buttons">
@@ -58,7 +64,7 @@
   </div>
   
       
-      <!-- ⚙️ MODAL DE CONFIGURACIÓN -->
+      <!--  MODAL DE CONFIGURACIÓN -->
       <div id="config-modal" class="modal hidden">
         <div class="modal-content config">
           <span class="close" data-close>&times;</span>
@@ -82,7 +88,7 @@
       </div>
 
       
-  <!-- ✅ REPRODUCTOR -->
+  <!--  REPRODUCTOR -->
   <footer class="music-player">
     🎵 Aquí irá el reproductor musical
   </footer>

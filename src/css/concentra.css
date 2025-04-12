@@ -5,8 +5,8 @@
   
   /* SIDEBAR */
   .sidebar {
-    background-color: #ffffff; /* Fondo blanco */
-    border-right: 1px solid #ddd; /* Borde gris claro */
+    background-color: #ffffff;
+    border-right: 1px solid #ddd; 
     width: 250px;
     padding: 1.5rem;
     height: 100vh;
@@ -230,5 +230,30 @@
   
   .hidden {
     display: none;
+  }
+  
+  /* NUEVO CONCENTRA FORMULARIO */
+.nuevo-concentra h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-concentra {
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+  }
+  
+  .form-concentra label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
+  
+  .form-concentra input {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
   }
   
