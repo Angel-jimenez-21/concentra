@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Concentra | Mi sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/concentra.css" />
+  <script>
+    // Validación de sesión activa
+    const user = localStorage.getItem("usuarioActivo");
+    if (!user) window.location.href = "/index.html";
+  </script>
+</head>
+<body>
+  <div class="concentra-layout">
+    <!-- ✅ SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">🧠 Concentra</div>
+    
+      <nav class="sidebar-menu">
+        <a href="/concentra.html">Concentra actual</a>
+        <a href="/stats.html">Estadísticas</a>
+        <a href="/nuevo.html">Crear nuevo Concentra</a>
+      </nav>
+    
+      <div class="sidebar-footer">
+        <button id="logout-btn">Cerrar sesión</button>
+        <div class="user-profile">
+          <div class="avatar">👤</div>
+          <span class="user-name">Usuario</span>
+        </div>
+      </div>
+    </aside>
+    
+
+    <!-- ✅ SECCIÓN PRINCIPAL -->
+    <main class="main-content">
+      <h1>Concentra Actual</h1>
+
+      <div class="timer-tabs">
+        <button class="tab active" data-type="pomodoro">Concentra</button>
+        <button class="tab" data-type="short">Descanso corto</button>
+        <button class="tab" data-type="long">Descanso largo</button>
+        <button id="config-btn" class="config-icon">⋮</button>
+      </div>
+      
+      <!-- 🕒 TEMPORIZADOR -->
+      <div id="ciclo-count" class="ciclo-info">Ciclos completados: 0</div>
+
+      <!-- 🕒 TEMPORIZADOR con botones centrados -->
+<div class="timer-box">
+    <div id="timer-display">25:00</div>
+    <div class="timer-buttons">
+      <button id="start-btn" class="btn-black">Comenzar</button>
+      <button id="reset-btn" class="btn-black hidden">Reiniciar</button>
+    </div>
+  </div>
+  
+      
+      <!-- ⚙️ MODAL DE CONFIGURACIÓN -->
+      <div id="config-modal" class="modal hidden">
+        <div class="modal-content config">
+          <span class="close" data-close>&times;</span>
+          <h3>Configuración de tiempos</h3>
+          <form id="config-form">
+            <label>
+              Concentra (min):
+              <input type="number" id="work-time" value="25" min="1" max="90" required />
+            </label>
+            <label>
+              Descanso corto (min):
+              <input type="number" id="short-break" value="5" min="1" max="30" required />
+            </label>
+            <label>
+              Descanso largo (min):
+              <input type="number" id="long-break" value="15" min="1" max="60" required />
+            </label>
+            <button type="submit" class="btn-black">Guardar</button>
+          </form>
+        </div>
+      </div>
+
+      
+  <!-- ✅ REPRODUCTOR -->
+  <footer class="music-player">
+    🎵 Aquí irá el reproductor musical
+  </footer>
+
+  <script type="module" src="/src/ts/logout.ts"></script>
+  <script type="module" src="/src/ts/timer.ts"></script>
+
+</body>
+</html>

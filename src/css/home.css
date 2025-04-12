@@ -1,0 +1,172 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease;
+
+}
+
+.navbar-menu a {
+  margin-right: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.hero-text h1 strong {
+  font-weight: 800;
+}
+
+.hero-text p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  max-width: 400px;
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.funciona,
+.beneficios {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.funciona-grid,
+.beneficios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.funciona-item,
+.beneficio-card {
+  max-width: 300px;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+.cta-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.registro {
+  background: black;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.registro-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-social a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-outline,
+.btn-primary,
+.btn-outline-white {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid black;
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* Estilo inicial transparente */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Estilo al hacer scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  pacity: 1;
+}

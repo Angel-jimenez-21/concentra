@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Concentra | Mejora tu concentración</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/home.css" />
+  <link rel="stylesheet" href="/src/css/modals.css" />
+</head>
+
+<body>
+  <!-- 🧠 NAV -->
+  <header class="navbar">
+    <div class="navbar-logo">🧠 Concentra</div>
+    <nav class="navbar-menu">
+      <a href="#inicio">Inicio</a>
+      <a href="/concentra.html">Temporizador</a>
+      <a href="/stats.html">Estadísticas</a>
+      <a href="#funciona">Cómo funciona</a>
+      <button id="btn-login" class="btn-outline">Iniciar sesión</button>
+      <button id="btn-register" class="btn-primary">Registrarse</button>
+    </nav>
+  </header>
+
+  <!-- 🟡 HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1><span>MEJORA TU</span><br><strong>CONCENTRACIÓN.</strong></h1>
+      <p>Ordena tu enfoque, potencia tu productividad y lleva tu método al siguiente nivel con sesiones diseñadas para el éxito.</p>
+      <a href="/concentra.html" class="btn-black">EMPEZAR</a>
+    </div>
+    <div class="hero-image"><!-- Aquí va imagen del cerebro y fondo amarillo --></div>
+  </section>
+
+  <!-- 🔍 FUNCIONAMIENTO -->
+  <section id="funciona" class="funciona">
+    <h2>¿Cómo Funciona?</h2>
+    <div class="funciona-grid">
+      <div class="funciona-item">
+        <div class="funciona-img"><!-- Imagen reloj --></div>
+        <h3>Técnica Pomodoro</h3>
+        <p>Usa intervalos de trabajo enfocado y descansos cortos para aumentar tu rendimiento.</p>
+      </div>
+      <div class="funciona-item">
+        <div class="funciona-img"><!-- Imagen persona con auriculares --></div>
+        <h3>Personaliza tu Concentra</h3>
+        <p>Ajusta los tiempos a tu ritmo. Elige música, descansos y sesiones para ti.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💡 BENEFICIOS -->
+  <section class="beneficios">
+    <h2>¿Por qué usar Concentra?</h2>
+    <div class="beneficios-grid">
+      <div class="beneficio-card">
+        <h4>Mejora tu concentración</h4>
+        <p>Organiza sesiones de trabajo efectivas con enfoque y control del tiempo.</p>
+      </div>
+      <div class="beneficio-card">
+        <h4>Personaliza tu método</h4>
+        <p>Usa la técnica que te funcione. Tiempos flexibles y sesiones a tu medida.</p>
+      </div>
+      <div class="beneficio-card">
+        <h4>Registra tu progreso</h4>
+        <p>Analiza tu tiempo productivo y descubre oportunidades de mejora.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧑‍💻 LLAMADO A LA ACCIÓN -->
+  <section class="cta">
+    <div class="cta-img"><!-- Imagen de oficina / personas trabajando --></div>
+    <div class="cta-text">
+      <h2>¿Qué esperas para comenzar?</h2>
+      <p>Configura tu primer Concentra y descubre cómo puede transformar tu concentración.</p>
+      <button class="btn-primary" id="btn-login-cta">Iniciar sesión</button>
+    </div>
+  </section>
+
+  <!-- 🌑 REGISTRO FINAL -->
+  <section class="registro">
+    <div class="registro-content">
+      <h3>Regístrate</h3>
+      <p>Es totalmente gratis y puedes ajustar tus sesiones como desees.</p>
+      <button id="btn-register-cta" class="btn-outline-white">Crear cuenta</button>
+    </div>
+    <div class="registro-img"><!-- Imagen fondo oscuro con silueta --></div>
+  </section>
+
+  <!-- ⚫ FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="/concentra.html">Temporizador</a>
+      <a href="#funciona">Cómo funciona</a>
+      <a href="/privacidad.html">Privacidad</a>
+    </div>
+    <p>Concentra © Copyright - 2025</p>
+    <div class="footer-social">
+      <a href="#">TikTok</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+
+  <!-- 🧩 MODALES -->
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-content login">
+      <span class="close" data-close>&times;</span>
+      <h2>Bienvenido</h2>
+      <p>Nuevo en Concentra? <strong>Regístrate</strong></p>
+      <form id="login-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Contraseña" required />
+        <button type="submit" class="btn-black">Continuar</button>
+        <a href="#" class="forgot-link">¿Olvidaste la contraseña?</a>
+      </form>
+    </div>
+  </div>
+
+  <div id="register-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3>Crear cuenta</h3>
+      <form id="register-form">
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <input type="password" placeholder="Contraseña" required />
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/ts/modal.ts"></script>
+  <script type="module" src="/src/ts/auth.ts"></script>
+</body>
+</html>
