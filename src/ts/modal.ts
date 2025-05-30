@@ -1,26 +1,26 @@
-// ✅ Función para mostrar u ocultar un modal
+//  Función para mostrar u ocultar un modal
 function toggleModal(modalId: string, show: boolean): void {
     const modal = document.getElementById(modalId);
     if (!modal) return;
     modal.classList.toggle("hidden", !show);
   }
   
-  // ✅ Mostrar modal de login
+  // Mostrar modal de login
   document.getElementById("btn-login")?.addEventListener("click", () => {
     toggleModal("login-modal", true);
   });
   
-  // ✅ Mostrar modal de registro desde el header
+  //  Mostrar modal de registro desde el header
   document.getElementById("btn-register")?.addEventListener("click", () => {
     toggleModal("register-modal", true);
   });
   
-  // ✅ Mostrar modal de registro desde CTA
+  //  Mostrar modal de registro desde CTA
   document.getElementById("btn-register-cta")?.addEventListener("click", () => {
     toggleModal("register-modal", true);
   });
   
-  // ✅ Cerrar modales al hacer clic en el ícono "X"
+  //  Cerrar modales al hacer clic en el ícono "X"
   document.querySelectorAll("[data-close]").forEach((btn) => {
     btn.addEventListener("click", () => {
       toggleModal("login-modal", false);
@@ -28,7 +28,7 @@ function toggleModal(modalId: string, show: boolean): void {
     });
   });
   
-  // ✅ Cerrar modales si se hace clic fuera del contenido
+  //  Cerrar modales si se hace clic fuera del contenido
   document.querySelectorAll(".modal").forEach((modal) => {
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
@@ -37,3 +37,8 @@ function toggleModal(modalId: string, show: boolean): void {
     });
   });
   
+  // Abrir modal desde el CTA de registro (registro-hero)
+document.getElementById("btn-register-section")?.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("register-modal")?.classList.remove("hidden");
+});

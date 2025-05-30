@@ -256,4 +256,12 @@
     border-radius: 6px;
     border: 1px solid #ccc;
   }
+  .nombre-activo {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-style: italic;
+  }
   

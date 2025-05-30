@@ -1,0 +1,37 @@
+
+
+.concentra-form {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .concentra-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  
+  .concentra-form input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .concentra-form button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

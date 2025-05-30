@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Concentra | Mis Concentras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/concentra.css" />
+  <link rel="stylesheet" href="/src/css/concentras.css" />
+  <script>
+    const user = localStorage.getItem("usuarioActivo");
+    if (!user) window.location.href = "/index.html";
+  </script>
+</head>
+<body>
+  <div class="concentra-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">🧠 Concentra</div>
+      <nav class="sidebar-menu">
+      
+        <a href="/concentra.html">Concentra actual</a>
+        <a href="/concentras.html">Concentras</a>
+        <a href="/stats.html">Estadísticas</a>
+        <a href="/nuevo.html">Crear Concentra</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn">Cerrar sesión</button>
+        <div class="user-profile">
+          <div class="avatar">👤</div>
+          <span class="user-name">Usuario</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <h1>Mis Concentras</h1>
+      <section id="concentras-lista" class="concentras-lista">
+        <!-- Aquí se cargarán los Concentras -->
+      </section>
+    </main>
+  </div>
+
+  <footer class="music-player">
+    🎵 Aquí irá el reproductor musical
+  </footer>
+
+  <script type="module" src="/src/ts/logout.ts"></script>
+  <script type="module" src="/src/ts/concentras.ts"></script>
+  <script type="module" src="/src/ts/concentras.ts"></script>
+
+</body>
+</html>

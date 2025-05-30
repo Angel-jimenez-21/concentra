@@ -1,0 +1,30 @@
+.stats-content {
+    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .stats-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
+  }
+  
+  .stat-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .stat-card h3 {
+    margin: 0 0 0.5rem;
+  }
+  
+  .stat-card span {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

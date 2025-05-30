@@ -10,9 +10,12 @@
 </head>
 
 <body>
-  <!-- 🧠 NAV -->
-  <header class="navbar">
-    <div class="navbar-logo">🧠 Concentra</div>
+  <!--  NAV -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-logo">
+      <img src="/src/assets/logo-C.svg" alt="Logo" class="logo-img" />
+      <span>Concentra</span>
+    </div>
     <nav class="navbar-menu">
       <a href="#inicio">Inicio</a>
       <a href="/concentra.html">Temporizador</a>
@@ -23,73 +26,106 @@
     </nav>
   </header>
 
-  <!-- 🟡 HERO -->
+  <!--  HERO -->
   <section id="inicio" class="hero">
+  <div class="hero-content">
     <div class="hero-text">
       <h1><span>MEJORA TU</span><br><strong>CONCENTRACIÓN.</strong></h1>
-      <p>Ordena tu enfoque, potencia tu productividad y lleva tu método al siguiente nivel con sesiones diseñadas para el éxito.</p>
+      <p><strong>"Domina tu enfoque, potencia tu productividad"</strong> – Usa el método Pomodoro para eliminar distracciones y alcanzar tus objetivos.</p>
       <a href="/concentra.html" class="btn-black">EMPEZAR</a>
     </div>
-    <div class="hero-image"><!-- Aquí va imagen del cerebro y fondo amarillo --></div>
-  </section>
+    <div class="hero-img">
+      <img src="/src/assets/brain.png" alt="Cerebro" />
+    </div>
+  </div>
+</section>
 
-  <!-- 🔍 FUNCIONAMIENTO -->
+  <!--  FUNCIONAMIENTO -->
   <section id="funciona" class="funciona">
-    <h2>¿Cómo Funciona?</h2>
-    <div class="funciona-grid">
-      <div class="funciona-item">
-        <div class="funciona-img"><!-- Imagen reloj --></div>
-        <h3>Técnica Pomodoro</h3>
-        <p>Usa intervalos de trabajo enfocado y descansos cortos para aumentar tu rendimiento.</p>
+  <h2 class="funciona-titulo">¿Cómo Funciona?</h2>
+
+  <div class="funciona-bloque">
+    <div class="funciona-texto">
+      <h3>Técnica<br>Pomodoro</h3>
+      <p>
+        La técnica Pomodoro, consiste en trabajar 25 minutos, descansar 5 y repetir, con pausas largas cada cuatro ciclos, mejorando concentración y productividad.
+      </p>
+    </div>
+    <div class="funciona-imagen">
+      <img src="/src/assets/reloj.png" alt="Reloj Pomodoro" />
+    </div>
+  </div>
+
+  <div class="funciona-bloque invertido">
+    <div class="funciona-imagen">
+      <img src="/src/assets/personaliza.png" alt="Personaliza tu Concentra" />
+    </div>
+    <div class="funciona-texto">
+      <h3>Personaliza tu<br>Concentra</h3>
+      <p>
+        Personaliza tu experiencia ajustando tiempos, notificaciones, sonidos y modo visual. Lleva un seguimiento con reportes, metas y logros, y sincroniza con otras herramientas para maximizar tu productividad.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!--  BENEFICIOS -->
+ <section class="beneficios">
+  <h2>¿Por qué usar Concentra?</h2>
+  <div class="beneficios-grid">
+
+    <!-- Bloque doble -->
+    <div class="beneficio-card doble">
+      <div class="beneficio-texto">
+        <h4>Mejora tu concentración</h4>
+        <p>"Sigue sesiones de trabajo enfocadas con descansos estratégicos para maximizar tu productividad."</p>
       </div>
-      <div class="funciona-item">
-        <div class="funciona-img"><!-- Imagen persona con auriculares --></div>
-        <h3>Personaliza tu Concentra</h3>
-        <p>Ajusta los tiempos a tu ritmo. Elige música, descansos y sesiones para ti.</p>
+      <div class="beneficio-imagen">
+        <img src="/src/assets/beneficios.png" alt="Ilustración concentración">
       </div>
     </div>
-  </section>
 
-  <!-- 💡 BENEFICIOS -->
-  <section class="beneficios">
-    <h2>¿Por qué usar Concentra?</h2>
-    <div class="beneficios-grid">
-      <div class="beneficio-card">
-        <h4>Mejora tu concentración</h4>
-        <p>Organiza sesiones de trabajo efectivas con enfoque y control del tiempo.</p>
-      </div>
+    <!-- NUEVA FILA de dos tarjetas -->
+    <div class="beneficios-fila">
       <div class="beneficio-card">
         <h4>Personaliza tu método</h4>
-        <p>Usa la técnica que te funcione. Tiempos flexibles y sesiones a tu medida.</p>
+        <p>"Ajusta la duración de tus sesiones, elige sonidos de fondo y adapta tu flujo de trabajo."</p>
       </div>
       <div class="beneficio-card">
         <h4>Registra tu progreso</h4>
-        <p>Analiza tu tiempo productivo y descubre oportunidades de mejora.</p>
+        <p>"Mide tu tiempo de concentración y analiza tu rendimiento con estadísticas detalladas."</p>
       </div>
     </div>
-  </section>
 
-  <!-- 🧑‍💻 LLAMADO A LA ACCIÓN -->
-  <section class="cta">
-    <div class="cta-img"><!-- Imagen de oficina / personas trabajando --></div>
-    <div class="cta-text">
-      <h2>¿Qué esperas para comenzar?</h2>
-      <p>Configura tu primer Concentra y descubre cómo puede transformar tu concentración.</p>
-      <button class="btn-primary" id="btn-login-cta">Iniciar sesión</button>
+  </div>
+</section>
+
+
+  <!-- LLAMADO A LA ACCIÓN -->
+  <section class="cta-final">
+  <div class="cta-container">
+    <div class="cta-img">
+      <img src="/src/assets/oficina.png" alt="Personas trabajando" />
     </div>
-  </section>
-
-  <!-- 🌑 REGISTRO FINAL -->
-  <section class="registro">
-    <div class="registro-content">
-      <h3>Regístrate</h3>
-      <p>Es totalmente gratis y puedes ajustar tus sesiones como desees.</p>
-      <button id="btn-register-cta" class="btn-outline-white">Crear cuenta</button>
+    <div class="cta-texto">
+      <h2>¿Qué esperas<br>para comenzar?</h2>
+      <p>Configura tu primer Pomodoro y descubre el poder de la concentración.</p>
+      <a href="/concentra.html" class="btn-black">Iniciar temporizador</a>
     </div>
-    <div class="registro-img"><!-- Imagen fondo oscuro con silueta --></div>
-  </section>
+  </div>
+</section>
 
-  <!-- ⚫ FOOTER -->
+
+  <!-- REGISTRO FINAL -->
+  <section class="registro-hero">
+  <div class="registro-overlay">
+    <h2>Regístrate</h2>
+    <p>"Regístrate gratis y desbloquea funciones avanzadas para mejorar tu enfoque cada día."</p>
+    <a href="#" class="btn-white" id="btn-register-section">Crear cuenta</a>
+  </div>
+</section>
+
+  <!--  FOOTER -->
   <footer class="footer">
     <div class="footer-links">
       <a href="#inicio">Inicio</a>
@@ -105,7 +141,7 @@
     </div>
   </footer>
 
-  <!-- 🧩 MODALES -->
+  <!--  MODALES -->
   <div id="login-modal" class="modal hidden">
     <div class="modal-content login">
       <span class="close" data-close>&times;</span>
@@ -136,5 +172,7 @@
   <!-- Scripts -->
   <script type="module" src="/src/ts/modal.ts"></script>
   <script type="module" src="/src/ts/auth.ts"></script>
+  <script type="module" src="/src/ts/navbar.ts"></script>
+
 </body>
 </html>

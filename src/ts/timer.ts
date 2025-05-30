@@ -202,3 +202,10 @@ function registrarSesion(tipo: "pomodoro" | "short" | "long", minutos: number) {
     localStorage.setItem("sesionesConcentra", JSON.stringify(sesiones));
   }
   
+  const params = new URLSearchParams(window.location.search);
+const nombre = params.get("nombre");
+const nombreElemento = document.getElementById("concentra-nombre-activo");
+
+if (nombre && nombreElemento) {
+  nombreElemento.textContent = `Usando: ${nombre}`;
+}

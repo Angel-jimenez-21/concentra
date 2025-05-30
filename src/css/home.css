@@ -28,17 +28,37 @@
 }
 
 .hero {
+   background-image: url("/src/assets/hero-bg.png"); 
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  color: black;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.hero-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary);
-  padding: 4rem 2rem;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-text {
+  max-width: 600px;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 20rem; 
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .hero-text h1 strong {
@@ -46,68 +66,265 @@
 }
 
 .hero-text p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
+   font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-img img {
   max-width: 400px;
+  height: auto;
 }
 
 .btn-black {
   background-color: black;
   color: white;
   padding: 0.8rem 1.6rem;
-  border-radius: 8px;
+  border-radius: 100px;
   margin-top: 1rem;
   display: inline-block;
   text-decoration: none;
 }
 
-.funciona,
-.beneficios {
-  padding: 3rem 2rem;
+.funciona {
+  padding: 4rem 2rem;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
-.funciona-grid,
-.beneficios-grid {
-  display: flex;
-  flex-wrap: wrap;
+.funciona-titulo {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.funciona-bloque {
+   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.funciona-item,
-.beneficio-card {
-  max-width: 300px;
-  padding: 1rem;
-  background: #f9f9f9;
-  border-radius: 12px;
+.funciona-bloque.invertido {
+ .funciona-bloque.invertido {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+ 
+}
+
+.funciona-texto {
+  flex: 1;
+  text-align: left;
+  max-width: 400px;
+}
+
+.funciona-texto h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.funciona-texto p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.funciona-imagen {
+  flex: 1;
   text-align: center;
 }
 
-.cta {
+.funciona-imagen img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+
+.beneficios {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.beneficios h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.beneficio-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.beneficio-card.doble {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.beneficio-texto {
+  flex: 1;
+}
+
+.beneficio-imagen {
+  flex: 1;
+  text-align: right;
+}
+
+.beneficio-imagen img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.beneficios-fila {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.beneficios-fila .beneficio-card {
+  flex: 1;
+  min-width: 280px;
+}
+
+.beneficio-card.doble {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.beneficio-texto {
+  flex: 1;
+}
+
+.beneficio-imagen {
+  flex: 1;
+  text-align: right;
+}
+
+.beneficio-imagen img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.cta-final {
+  padding: 4rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+}
+
+.cta-container {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 3rem 2rem;
+  justify-content: space-between;
   gap: 2rem;
 }
 
-.cta-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.cta-img img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
 }
 
-.registro {
-  background: black;
+.cta-texto {
+  flex: 1;
+  max-width: 500px;
+}
+
+.cta-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.cta-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-black {
+  background-color: black;
   color: white;
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.registro-content h3 {
-  font-size: 2rem;
+
+.registro-hero {
+  position: relative;
+  background-image: url('/src/assets/registro-bg.png'); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+  margin: 4rem auto;
+  max-width: 1200px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  overflow: hidden;
+}
+
+.registro-overlay {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.registro-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 1rem;
+}
+
+.registro-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+  padding: 0.8rem 1.6rem;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .footer {
@@ -130,7 +347,7 @@
 .btn-primary,
 .btn-outline-white {
   padding: 0.5rem 1.2rem;
-  border-radius: 6px;
+  border-radius: 100px;
   font-weight: 600;
 }
 
@@ -141,32 +358,45 @@
 
 .btn-outline {
   background: transparent;
-  border: 2px solid black;
+  border: 1.5px solid black;
 }
 
 .btn-outline-white {
   background: transparent;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
 }
 
-/* Estilo inicial transparente */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 1.5rem 2rem;
+.navbar-logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  transition: all 0.3s ease;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: inherit;
 }
 
-/* Estilo al hacer scroll */
+.logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+
+
+/* NAVBAR BASE (transparente al inicio) */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  background-color: transparent;
+}
+
+/* NAVBAR al hacer scroll (glass blanco) */
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  pacity: 1;
+  background-color: rgba(255, 255, 255, 0.7); 
+  backdrop-filter:  blur(20px); 
+ 
 }

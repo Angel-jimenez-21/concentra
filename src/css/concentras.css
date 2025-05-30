@@ -1,0 +1,66 @@
+/* Estilos para la vista de Mis Concentras */
+
+.main-content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto; /* ← centrado horizontal solo del contenedor */
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+  }
+  
+  
+  
+  .concentras-lista {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .concentra-card {
+    background-color: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .concentra-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .concentra-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .concentra-info span {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .card-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .card-actions button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn-ver {
+    background-color: #000;
+    color: white;
+  }
+  
+  .btn-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
